@@ -329,7 +329,7 @@ body.light-mode .theme-toggle-icon--light {
 }
 
 .section-label {
-  font-size: 1.50rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-faint);
