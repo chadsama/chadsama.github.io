@@ -1,3 +1,12 @@
+// --- 0. Dark / Light Theme Toggle ---
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+});
+
+
 // --- 1. Dynamic Year in Footer ---
 document.getElementById('year').textContent = new Date().getFullYear();
 
