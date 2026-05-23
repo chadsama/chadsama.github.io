@@ -25,6 +25,21 @@
   --section-pad: 6rem 2rem;
 }
 
+/* --- Light Mode Variables --- */
+body.light-mode {
+  --ink:         #1a2e1a;
+  --ink-muted:   #3d5c3d;
+  --ink-faint:   #6a8a6a;
+  --surface:     #F2F0EF;
+  --surface-alt: #E9E6E4;
+  --surface-mid: #DDD9D6;
+  --accent:      #3a7a3a;
+  --accent-dim:  #4e944e;
+  --accent-glow: rgba(58, 122, 58, 0.08);
+  --border:      rgba(58, 122, 58, 0.15);
+  --border-mid:  rgba(58, 122, 58, 0.25);
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -36,6 +51,7 @@ body {
   color: var(--ink);
   line-height: 1.7;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 a {
@@ -63,11 +79,21 @@ img {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
-  transition: padding 0.3s ease;
+  transition: padding 0.3s ease, background 0.4s ease;
+}
+
+body.light-mode .nav {
+  background: rgba(242, 240, 239, 0.92);
 }
 
 .nav.scrolled {
   padding: 0.85rem 2.5rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .nav-logo {
@@ -76,6 +102,72 @@ img {
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   color: var(--accent);
+}
+
+/* --- Theme Toggle Button --- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  color: var(--ink-muted);
+}
+
+.theme-toggle-track {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background: var(--surface-mid);
+  border: 1px solid var(--border-mid);
+  border-radius: 20px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+}
+
+body.light-mode .theme-toggle-thumb {
+  transform: translateX(16px);
+  background: var(--accent);
+}
+
+body.light-mode .theme-toggle-track {
+  background: var(--surface-mid);
+  border-color: var(--border-mid);
+}
+
+.theme-toggle-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle-icon--dark {
+  opacity: 1;
+}
+
+.theme-toggle-icon--light {
+  opacity: 0.4;
+}
+
+body.light-mode .theme-toggle-icon--dark {
+  opacity: 0.4;
+}
+
+body.light-mode .theme-toggle-icon--light {
+  opacity: 1;
 }
 
 .nav-links {
