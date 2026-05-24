@@ -108,15 +108,15 @@ sections.forEach(section => sectionObserver.observe(section));
 
 
 // --- 7. Project Items: Hover Lift ---
+// REMOVED padding modification logic to prevent text shifting and overflow
 const projectItems = document.querySelectorAll('.project-item');
 
 projectItems.forEach(item => {
   item.addEventListener('mouseenter', () => {
-    item.style.paddingLeft = '0.75rem';
-    item.style.transition = 'padding 0.2s ease';
+    // Left empty to prevent dynamic layout shifting
   });
   item.addEventListener('mouseleave', () => {
-    item.style.paddingLeft = '0';
+    // Left empty to prevent dynamic layout shifting
   });
 });
 
