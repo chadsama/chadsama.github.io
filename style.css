@@ -571,11 +571,12 @@ body.light-mode .theme-toggle-icon--light {
   grid-template-columns: 80px 1fr auto;
   gap: 2rem;
   align-items: start;
-  padding: 2rem 1rem; /* Altered: Added left/right padding to let the background breathe */
-  margin: 0 -1rem;    /* Altered: Negative margin pulls layout back into standard alignment bounds */
+  padding: 2rem 1rem; /* Bounded padding for the background glow */
+  margin: 0 -1rem;    /* Pulls it back clean in line with the layout width */
   border-bottom: 1px solid var(--border);
-  transition: padding-left 0.2s ease;
+  transition: background 0.3s ease; /* CHANGED: Removed padding-left from transition */
   cursor: pointer;
+  position: relative;
 }
 
 .project-item:first-child {
