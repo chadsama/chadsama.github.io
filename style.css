@@ -571,7 +571,8 @@ body.light-mode .theme-toggle-icon--light {
   grid-template-columns: 80px 1fr auto;
   gap: 2rem;
   align-items: start;
-  padding: 2rem 0;
+  padding: 2rem 1rem; /* Altered: Added left/right padding to let the background breathe */
+  margin: 0 -1rem;    /* Altered: Negative margin pulls layout back into standard alignment bounds */
   border-bottom: 1px solid var(--border);
   transition: padding-left 0.2s ease;
   cursor: pointer;
@@ -580,6 +581,28 @@ body.light-mode .theme-toggle-icon--light {
 .project-item:first-child {
   border-top: 1px solid var(--border);
 }
+
+/* --- ADDED: Clone of the Skill Card hover accent glow --- */
+.project-item:hover {
+  background: rgba(168, 212, 168, 0.05);
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:hover::before {
+  opacity: 1;
+}
+/* -------------------------------------------------------- */
 
 .project-item:hover .project-link {
   transform: translateX(6px);
