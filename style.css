@@ -574,7 +574,7 @@ body.light-mode .theme-toggle-icon--light {
   padding: 2rem 1rem; /* Bounded padding for the background glow */
   margin: 0 -1rem;    /* Pulls it back clean in line with the layout width */
   border-bottom: 1px solid var(--border);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease; /* CHANGED: Removed padding-left from transition */
   cursor: pointer;
   position: relative;
 }
@@ -583,8 +583,9 @@ body.light-mode .theme-toggle-icon--light {
   border-top: 1px solid var(--border);
 }
 
+/* --- ADDED: Clone of the Skill Card hover accent glow --- */
 .project-item:hover {
-  background: rgba(168, 212, 168, 0.05);
+  background: var(--accent-glow); /* Changed: Dynamically uses light/dark glow variables */
 }
 
 .project-item::before {
@@ -782,35 +783,11 @@ body.light-mode .theme-toggle-icon--light {
   grid-template-columns: 28px 1fr;
   gap: 2rem;
   position: relative;
-  padding: 1rem 1rem 2rem 1rem;
-  margin: 0 -1rem;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: background 0.3s ease; /* Smooth green color blend */
+  padding-bottom: 3rem;
 }
 
 .timeline-item:last-child {
-  padding-bottom: 1rem; 
-}
-
-.timeline-item:hover {
-  background: rgba(168, 212, 168, 0.05);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.timeline-item:hover::before {
-  opacity: 1;
+  padding-bottom: 0;
 }
 
 .timeline-marker {
@@ -832,9 +809,25 @@ body.light-mode .theme-toggle-icon--light {
   z-index: 1;
 }
 
-.timeline-item:hover .timeline-dot {
-  background: var(--accent);
-  box-shadow: 0 0 12px rgba(168, 212, 168, 0.35);
+.timeline-item:hover {
+  background: var(--accent-glow); /* Changed: Dynamically uses light/dark glow variables */
+}
+
+/* Optional: Top glow line accent matching your styles */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  opacity: 1;
 }
 
 .timeline-line {
