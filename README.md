@@ -1,6 +1,6 @@
 # Chad de Guzman - Personal Portfolio
 
-A modern, responsive portfolio website showcasing my work, skills, and experience. Built with a focus on elegant design, smooth interactions, and accessibility.
+A modern, responsive portfolio website showcasing my work, skills, and experience.
 
 ## 🎨 Features
 
@@ -64,11 +64,9 @@ The design uses CSS custom properties for easy theme switching:
 --surface: #0d110d       /* Background */
 
 /* Light Mode */
-body.light-mode {
-  --ink: #1a2e1a
-  --surface: #F2F0EF
-  --accent: #3a7a3a
-}
+--ink: #1a2e1a
+--surface: #F2F0EF
+--accent: #3a7a3a
 ```
 
 ### Layout
@@ -128,9 +126,9 @@ chaddeguzman.github.io/
 ## 🔗 Links
 
 - **Live Portfolio**: [chaddeguzman.github.io](https://chaddeguzman.github.io)
-- **Email**: [contact me](mailto:your-email@example.com)
+- **Email**: [contact me](mailto:chadsama.27@gmail.com)
 - **GitHub**: [@chaddeguzman](https://github.com/chaddeguzman)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/chad-de-guzman/)
 
 ## 📝 License
 
@@ -146,4 +144,4 @@ This portfolio is open source and available under the MIT License.
 
 **Last Updated**: May 2026
 
-Feel free to fork this repository and customize it for your own portfolio!
+Feel free to fork this repository and customize it for your own
