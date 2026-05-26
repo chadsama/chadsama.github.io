@@ -126,13 +126,9 @@ chaddeguzman.github.io/
 ## 🔗 Links
 
 - **Live Portfolio**: [chaddeguzman.github.io](https://chaddeguzman.github.io)
-- **Email**: [contact me](mailto:chadsama.27@gmail.com)
-- **GitHub**: [@chaddeguzman](https://github.com/chaddeguzman)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/chad-de-guzman/)
-
-## 📝 License
-
-This portfolio is open source and available under the MIT License.
+- **Email**: [chadsama.27@gmail.com](mailto:chadsama.27@gmail.com)
+- **GitHub**: [/chaddeguzman](https://github.com/chaddeguzman)
+- **LinkedIn**: [chad-de-guzman](https://www.linkedin.com/in/chad-de-guzman/)
 
 ## 🙏 Credits
 
